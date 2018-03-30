@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tamaño de item en columnas</title>
+	<style type="text/css">
+		body{
+			font-family: Arial;
+		}
+		.container{
+			/*grid-template: filas / columnas;*/
+			/*fr*/
+			/*grid-template: 300px 100px 100px / repeat(4,1fr);*/
+			/*grid-template: 300px 100px 100px / repeat(4,minmax(200px,1fr));*/
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			grid-template-rows: repeat(4,1fr);			
+			grid-column-gap: 30px;
+			grid-row-gap: 50px;
+			/*grid-gap: filas columas;*/
+			grid-gap: 10px;
+			height:100vh;
+		}
+		.item{
+			background-color:  lightblue;
+			padding: 10px;
+			border:1px solid red;
+		}
+		.item:nth-of-type(1){
+			background-color: blue;
+			grid-column-start: 1;	
+			grid-column-end: 3;	
+		}
+		.item:nth-of-type(7){
+			background-color: blue;
+			grid-column:2 / 4;
+		}			
+		.item:nth-of-type(8){
+			background-color: blue;
+			/*grid-column:1 / span 2;*/
+			grid-column:1 / -1;
+		}								
+	</style>
+</head>
+<body>
+	<section class="container">
+		<div class="item">item #1</div>
+		<div class="item">item #2</div>
+		<div class="item">item #3</div>
+		<div class="item">item #4</div>
+		<div class="item">item #5</div>
+		<div class="item">item #6</div>
+		<div class="item">item #7</div>
+		<div class="item">item #8</div>
+		<div class="item">item #9</div>
+		<div class="item">item #10</div>
+		<div class="item">item #11</div>
+		<div class="item">item #12</div>
+	</section>
+</body>
+</html>
