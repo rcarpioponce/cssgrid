@@ -1,1 +1,1 @@
-cssgrid
+Estudiando el curso de cssgrid de platzi.
